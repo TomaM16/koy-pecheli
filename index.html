@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="bg" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кой печели — обществените поръчки в България</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pg">
+<header class="top">
+  <div class="wrap">
+    <h1>Кой печели</h1>
+    <div class="one">
+      <div class="num" id="bignum"></div>
+      <p class="say" id="bigsay"></p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ начална ============ -->
+  <div id="home">
+
+    <section class="block">
+      <h2>Десетте, които изпъкват</h2>
+      <p class="hint">Двойки възложител и изпълнител, при които няколко
+        признака се събират наведнъж. <b>Признак не е нарушение</b> —
+        <button class="lnk" data-open="kak">какво значи това</button>.
+        Кликни на карта за подробности.</p>
+      <div class="cards" id="top"></div>
+    </section>
+
+    <details class="acc big">
+      <summary>Разгледай всичко сам <span class="mut" id="summ"></span></summary>
+      <div class="accbody">
+        <nav class="tabs" id="tabs" role="tablist"></nav>
+        <div class="ctrls">
+          <input id="q" type="search" placeholder="Търси възложител или фирма …"
+                 autocomplete="off" aria-label="Търсене">
+          <span class="count" id="count"></span>
+        </div>
+        <div class="tablewrap">
+          <table id="tbl"><thead></thead><tbody></tbody></table>
+        </div>
+        <p class="more"><button id="more">Покажи още</button></p>
+      </div>
+    </details>
+
+    <details class="acc big" id="kak">
+      <summary>Какво значи „признак“</summary>
+      <div class="accbody">
+        <p class="disc">
+          <b>Една оферта често е напълно законна.</b> Учебници се купуват от
+          издателя, ток от мрежовия оператор, лекарства от вписан доставчик.
+          Затова нито един признак сам по себе си не значи нищо. Значение има
+          <b>кога няколко се съберат върху една и съща двойка</b>.
+        </p>
+        <p class="disc warn">
+          Тук няма установени нарушения — има изчисления върху официални
+          данни. Служат само за да се реши откъде да започне проверка.
+        </p>
+        <h4>Признаците</h4>
+        <dl class="defs">
+          <div><dt>Един кандидат</dt><dd>Договорът е сключен, след като е подадена една-единствена оферта.</dd></div>
+          <div><dt>Дял от парите</dt><dd>Каква част от всички разходи на възложителя отиват при този изпълнител.</dd></div>
+          <div><dt>Поскъпване</dt><dd>Договорът е бил изменен и стойността му е скочила с над 20% след подписа.</dd></div>
+          <div><dt>Повторяемост</dt><dd>Едни и същи две страни се срещат в много договори.</dd></div>
+          <div><dt>Размер</dt><dd>Брои се отделно. Без него класацията се пълни с доставчици на детски градини по 40 хил. лв.</dd></div>
+        </dl>
+      </div>
+    </details>
+
+    <details class="acc big">
+      <summary>Откъде са данните</summary>
+      <div class="accbody">
+        <p class="src">
+          Агенция по обществени поръчки, „Договори и изменения на договори",
+          публикувани на <a href="https://data.egov.bg" target="_blank"
+          rel="noopener">Портала за отворени данни</a> под лицензи CC0 и
+          CC-BY. Обхваща данни от <b>РОП</b> и <b>ЦАИС ЕОП</b>.
+        </p>
+        <p class="src" id="obhvat"></p>
+        <p class="src" id="registar"></p>
+      </div>
+    </details>
+
+    <footer class="foot">
+      <a class="xproj" href="https://tomam16.github.io/sofia-otgore/"
+         target="_blank" rel="noopener">
+        <span class="xt">София отгоре</span>
+        <span class="xs">Карта и данни за имотите в Столична община —
+          208 000 сгради, законност, население, цени</span>
+      </a>
+    </footer>
+  </div>
+
+  <!-- ============ детайлна ============ -->
+  <div id="detail" style="display:none"></div>
+
+</main>
+
+<button id="themebtn" title="Смяна на темата">◐</button>
+<script type="module" src="app.js"></script>
+</body>
+</html>
